@@ -9,15 +9,12 @@ publishDir = "dexterposh.github.io"
 [params]
   author = "Deepak Singh Dhami"
   description = "Dev?Ops"
-
   [[params.social]]
     name = "github"
     url = "https://github.com/dexterposh"
-
   [[params.social]]
     name = "twitter"
     url = "https://twitter.com/dexterposh"
-
   [params.style]
     darkestColor = "#315659"
     darkColor = "#253031"
