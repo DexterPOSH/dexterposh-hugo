@@ -2,7 +2,7 @@ baseURL = "http://dexterposh.github.io/"
 languageCode = "en-us"
 title = "Notes from a system engineer's desk"
 theme = "m10c"
-publishDir = "public"
+publishDir = "dexterposh.github.io"
 
 
 [params]
