@@ -1,6 +1,9 @@
 ---
 title: "Azure DevOps Tip - Find private APIs"
 date: 2020-04-14T15:06:22+05:30
+author: "Deepak Singh Dhami"
+tags: ["azdo", "tip", "api"]
+categories: ["azuredevops"]
 ---
 
 ## Problem
@@ -94,7 +97,7 @@ Read the error message, it explains that the api-version is missing. Also, looki
 Let's make the same change in our code snippet to include API version in the
 header.
 
-```powershell
+```powershell {hl_lines=[14], linenostart=1}
 $url = 'https://dev.azure.com/ddhami/BITPro.AzDeploy/_apis/distributedtask/environments'
 $cred = Get-Credential -UserName 'vsts' -Message 'Enter AzDO Personal Access Token with privs to create env'
 $encodedValue = [Convert]::ToBase64String(
