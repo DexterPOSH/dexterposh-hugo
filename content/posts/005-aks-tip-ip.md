@@ -1,7 +1,6 @@
 ---
 title: "AKS PowerShell Tip - Add Authorized Ip"
 date: 2020-05-01T12:21:28+05:30
-draft: true
 author: "Deepak Singh Dhami"
 tags: ["aks", "azure", "api", "powershell", "tip", "ip"]
 ---
