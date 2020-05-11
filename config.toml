@@ -5,6 +5,7 @@ theme = "m10c"
 paginate = 5
 publishDir = "dexterposh.github.io"
 googleAnalytics = "UA-165270256-1"
+enableEmoji = true
 
 
 [params]
