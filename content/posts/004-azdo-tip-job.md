@@ -2,6 +2,7 @@
 title: "Azure DevOps Tip - Job re-use within a Stage"
 date: 2020-04-26T09:53:50+05:30
 tags: ["azdo", "tip", "yaml", "jobs"]
+highlightjslanguages: ["yaml"]
 ---
 
 ## Background

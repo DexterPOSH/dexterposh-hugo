@@ -4,6 +4,7 @@ date: 2020-04-14T15:06:22+05:30
 author: "Deepak Singh Dhami"
 tags: ["azdo", "tip", "api"]
 categories: ["azuredevops"]
+highlightjslanguages: ["powershell"]
 ---
 
 ## Problem
