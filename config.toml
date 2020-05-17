@@ -1,25 +1,20 @@
 baseURL = "https://dexterposh.github.io/"
 languageCode = "en-us"
 title = "Notes from a system engineer's desk"
-theme = "m10c"
+theme = "hyde"
 paginate = 5
 publishDir = "dexterposh.github.io"
 googleAnalytics = "UA-165270256-1"
 enableEmoji = true
 
+[Menus]
+  main = [
+      {Name = "Github", URL = "https://github.com/dexterposh"},
+      {Name = "Twitter", URL = "https://twitter.com/dexterposh"}
+  ]
 
 [params]
   author = "Deepak Singh Dhami"
   description = "Dev?Ops"
-  [[params.social]]
-    name = "github"
-    url = "https://github.com/dexterposh"
-  [[params.social]]
-    name = "twitter"
-    url = "https://twitter.com/dexterposh"
-  [params.style]
-    darkestColor = "#315659"
-    darkColor = "#253031"
-    primaryColor = "#dad865"
-    lightColor = "#96a879"
-    lightestColor = "#fff"
+  themeColor = "theme-base-0d"
+  layoutReverse = true
