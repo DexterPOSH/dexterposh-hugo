@@ -48,7 +48,7 @@ Hello world!
 
 ### Using statements in scripts
 
-Now, let's modify this script to quickly explore creating a SHA256 hash.
+Now, let's modify this script to explore creating a SHA256 hash.
 
 First, thing is we need to place some using statements to bring in the Cryptography and Text namespace like below.
 
@@ -64,12 +64,12 @@ using System.Security.Cryptography;
 
 ### Reading the docs
 
-Moving on, after quickly browsing the documentation of the [SHA256 class](https://docs.microsoft.com/en-us/dotnet/api/system.security.cryptography.sha256.create?view=netcore-3.1#System_Security_Cryptography_SHA256_Create) I quickly noticed a *Create()* method which creates a default instance.
+Moving on, after browsing the documentation of the [SHA256 class](https://docs.microsoft.com/en-us/dotnet/api/system.security.cryptography.sha256.create?view=netcore-3.1#System_Security_Cryptography_SHA256_Create) I noticed a *Create()* method which creates a default instance.
 
 Also, noticed that the inheritance chain for this class is
 Object -> HashAlgorithm -> SHA256
 
-HashAlgorithm is the base class with below signature, notice it in turn inherits from IDisposable interface this quickly reminded me to use the `using` statement syntax to conveniently dispose this object after re-use, rather than calling `Dispose()` method myself inside try/catch/finally statements.
+HashAlgorithm is the base class with below signature, notice it in turn inherits from IDisposable interface this immediately reminded me to use the `using` statement syntax to conveniently dispose this object after re-use, rather than calling `Dispose()` method myself inside try/catch/finally statements.
 
 ```csharp
 public abstract class HashAlgorithm : IDisposable, System.Security.Cryptography.ICryptoTransform
