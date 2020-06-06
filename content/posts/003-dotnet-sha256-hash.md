@@ -75,7 +75,6 @@ HashAlgorithm is the base class with below signature, notice it in turn inherits
 public abstract class HashAlgorithm : IDisposable, System.Security.Cryptography.ICryptoTransform
 ```
 
-Also, with C# 8 onwwards the using statement syntax is simplified so this means I can add the below to my .csx file.
 
 ```csharp
 #!/usr/bin/env dotnet-script
@@ -85,7 +84,10 @@ using System.Security.Cryptography;
 
 string text = "DexterPOSH"; // this is our text for which we will generate hash
 
-using (SHA256 hashAlgorithm = SHA256.Create()); // C# 8 syntax for using statement
+using (SHA256 hashAlgorithm = SHA256.Create())
+{
+    // place holder
+};
 ```
 
 The docs also reveal the `ComputeHash()` method which takes `byte[]` array as argument and returns the byte array back as well.
@@ -104,9 +106,11 @@ using System.Security.Cryptography;
 
 string text = "DexterPOSH"; // this is our text for which we will generate hash
 
-using (SHA256 hashAlgorithm = SHA256.Create()); // C# 8 syntax for using statement
-var hashedByteArray = hashAlgorithm.ComputeHash(Encoding.UTF8.GetBytes(input));
-Console.WriteLine(hashedByteArray);
+using (SHA256 hashAlgorithm = SHA256.Create())
+{
+    var hashedByteArray = hashAlgorithm.ComputeHash(Encoding.UTF8.GetBytes(input));
+    Console.WriteLine(hashedByteArray);
+}
 ```
 
 Output:
