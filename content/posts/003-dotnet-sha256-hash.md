@@ -134,9 +134,11 @@ using System.Security.Cryptography;
 
 string text = "DexterPOSH"; // this is our text for which we will generate hash
 
-using (SHA256 hashAlgorithm = SHA256.Create()); // C# 8 syntax for using statement
-var hashedByteArray = hashAlgorithm.ComputeHash(Encoding.UTF8.GetBytes(input));
-Console.WriteLine(BitConverter.ToString(hashedByteArray));
+using (SHA256 hashAlgorithm = SHA256.Create())
+{
+    var hashedByteArray = hashAlgorithm.ComputeHash(Encoding.UTF8.GetBytes(input));
+    Console.WriteLine(BitConverter.ToString(hashedByteArray));
+};
 ```
 
 Output:
