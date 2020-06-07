@@ -1,7 +1,7 @@
 ---
 title: "ARM templates - iterate & deploy resource"
 date: 2020-05-26T15:18:35+05:30
-highlightjslanguages: ["json", "powershell"]
+highlight: false
 image: "/static/006/transformParams.png"
 ---
  
