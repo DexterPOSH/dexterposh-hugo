@@ -38,11 +38,9 @@ Below is how my project directory layout looks like.
 
 ### Author linked template
 
-First thing to do when you're writing an ARM template is to make sure you understand that component properly, how it works, best practices while using that Azure component etc.
+First thing to do when you're writing an ARM template is to make sure you understand that component properly, how it works, best practices while using that Azure component etc. Why? you might be wondering because ARM templates is how you deploy your Azure cloud infrastructure and it would be as good as you make your ARM templates, they're called blueprints for your Azure resources for this reason.
 
-Why? you might be wondering because ARM templates is how you deploy your Azure cloud infrastructure and it would be as good as you make your ARM templates, they're called blueprints for your Azure resources for this reason.
-
-But at the same time start small and head over to [azure-quickstart-templates](https://github.com/Azure/azure-quickstart-templates) repository to get an idea of the scenarios.
+But at the same time start small and head over to [azure-quickstart-templates](https://github.com/Azure/azure-quickstart-templates) repository to get some samples.
 
 I found out that the template stored here in this [101-storage-account-create](https://github.com/Azure/azure-quickstart-templates/blob/master/101-storage-account-create/azuredeploy.json) example is good enough for me. So, let me copypasta ✍ this and place the content inside my `linkedtemplate\storageaccount.json` file.
 
