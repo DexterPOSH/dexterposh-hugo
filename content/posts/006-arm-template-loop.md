@@ -3,6 +3,7 @@ title: "ARM templates - iterate & deploy resource"
 date: 2020-05-26T15:18:35+05:30
 highlight: false
 image: "/static/006/transformParams.png"
+categories: ["azure", "arm", "iac", "cloud"]
 ---
  
 ## Background 🧐
