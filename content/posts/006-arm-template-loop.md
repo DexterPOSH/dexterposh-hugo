@@ -7,9 +7,9 @@ image: "/static/006/transformParams.png"
  
 ## Background 🧐
 
-I like ARM templates, I use it a lot to deploy Azure cloud resources but as all things it has some pain points associated with it. In this post, let's see how you can iterate over based on certain logic and deploy multiple linked resources.
+I like ARM templates, I use it a lot to deploy Azure cloud resources but as all things it has some pain points associated with it. In this post, let's see how you can iterate over based on certain logic and deploy multiple resources using linked templates.
 
-As it stands out this tripped me a lot in the beginning.
+As it stands out this logic of iterating over and deploying multiple instances of a resource tripped me a lot in the beginning.
 
 ## Walkthrough 🏃
 
