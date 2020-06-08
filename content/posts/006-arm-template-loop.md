@@ -112,7 +112,7 @@ Moving on to the logic of consolidating user input and then looping over and dep
 
 The gist is that we have to do below:
 
-* Use variable iteration to create an array of objects based on our `numberofStorageAccounts` prameter value
+* Use variable iteration to create an array of objects based on our `numberofStorageAccounts` parameter value
 
 * Use resource iteration later with a linked template deployment and index into the array created above for parameter values.
 

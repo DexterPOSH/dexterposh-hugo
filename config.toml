@@ -16,8 +16,6 @@ summarylength = 30
   description = "Cloud, Servers & Code."
   authorimage = "avatar.jpg"
   dateformat = "Jan 2, 2006"
-
-  # https://highlightjs.org
   highlightjs = true
   highlightjsstyle = "github"
 
@@ -25,8 +23,8 @@ summarylength = 30
   toc = "hugo"
 
 [params.social]
-    github = "https://github.com/dexterposh"
-    twitter = "https://twitter.com/dexterposh"
+    github = "dexterposh"
+    twitter = "dexterposh"
 
 [[menu.main]]
     name = "Posts"
