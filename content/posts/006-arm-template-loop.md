@@ -242,7 +242,7 @@ Also, I added a `variables` property in the output which is used to display what
 
 From a data-view point above creates a variable named `_deployMultipleStorageAccounts` which is an array of Json objects.
 
-If we assume the `parameters('numberofStorageAccounts')` is 2, `parameters('storageAccountType')` is *Standard_GRS* and `parameters('storageAccountType')` is *SouthEastAsia*, then it creates an array like below:
+If we assume the `parameters('numberofStorageAccounts')` is 2, `parameters('storageAccountType')` is *Standard_GRS* and `parameters('location')` is *SouthEastAsia*, then it creates an array like below:
 
 ```json
 [
@@ -254,7 +254,7 @@ If we assume the `parameters('numberofStorageAccounts')` is 2, `parameters('stor
   {
     "storageAccountName": "<generatedValuebyARM>",
     "storageAccountType": "Standard_GRS",
-    "loation": "SouthEastAsia",
+    "location": "SouthEastAsia",
   }
 ]
 ```
