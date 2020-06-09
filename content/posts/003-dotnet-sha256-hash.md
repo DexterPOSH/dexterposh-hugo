@@ -183,10 +183,9 @@ Content of the sha256hash.csx file.
 
 using System.Text;
 using System.Security.Cryptography;
-
 using (SHA256 hashAlgorithm = SHA256.Create())
 {
-    string input = "Deepak Singh Dhami";
+    string input = "DexterPOSH";
 
     byte[] data = hashAlgorithm.ComputeHash(
         Encoding.UTF8.GetBytes(input)
