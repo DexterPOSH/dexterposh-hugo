@@ -10,7 +10,7 @@ highlightjslanguages: ["powershell"]
 
 ## Origin❓
 
-(shameless plug, alert!)
+(shameless plug, alert!) 🙃
 
 Recently, I was discussing with my colleague about this new [book](https://leanpub.com/powershell-to-csharp) I am co-authoring (with [Prateek](https://twitter.com/singhprateik)) about why to learn .NET to be a better PowerShell programmer and upon further discussion we pondered some interesting ways to use PowerShell classes.
 
@@ -56,7 +56,7 @@ Let's run the `ConverTo-Class` function in the ConvertToClass module against thi
 ConvertTo-Class -Target (Get-Content ./azuredeploy.parameters.json -Raw)
 ```
 
-![Auto generate PowerShell class definition](/static/007/class1.png)
+![alt](/static/007/class1.png)
 
 Above command generates below content:
 
