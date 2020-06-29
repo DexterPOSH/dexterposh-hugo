@@ -48,7 +48,7 @@ Let's start by taking a sample `azuredeploy.parameters.json` file.
 }
 ```
 
-### Convert Json to Class ☯ß
+### Convert Json to Class ☯
 
 Let's run the `ConverTo-Class` function in the ConvertToClass module against this `azuredeploy.parameters.json` file.
 
