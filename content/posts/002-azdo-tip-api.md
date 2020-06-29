@@ -2,7 +2,7 @@
 title: "Azure DevOps Tip - Find private APIs"
 date: 2020-04-14T15:06:22+05:30
 author: "Deepak Singh Dhami"
-tags: ["azdo", "tip", "api"]
+tags: ["azdo", "tip", "api", "powershell"]
 categories: ["azuredevops"]
 highlightjslanguages: ["powershell"]
 ---
