@@ -201,7 +201,7 @@ The answer is that we will be a using a trick with how we create an instance of 
 
 ### Secret-Sauce : Cast-Initialization 🍲
 
-I read Buce Payette's [Windows PowerShell in Action 3rd](https://livebook.manning.com/book/windows-powershell-in-action-third-edition/chapter-19/311) edition which talks a bit about this technique in a brief.
+Credit goes to Buce Payette's [Windows PowerShell in Action 3rd](https://livebook.manning.com/book/windows-powershell-in-action-third-edition/chapter-19/311) edition which talks a bit about this technique in a brief.
 
 In short, you can take schemaless data in two forms e.g. hashTable or PSObjects and convert them to strongly typed object instances.
 
@@ -245,6 +245,7 @@ InvalidArgument: Cannot convert value "@{$schema=https://schema.management.azure
 ## Resource links 📚
 
 * [PowerShell to C# and back](https://leanpub.com/powershell-to-csharp) - Disclaimer: co-author on this one.
+* [PowerShell to C# and Back – Introduction to Classes](https://ridicurious.com/2020/06/29/powershell-to-csharp-and-back-classes/)
 * [Windows PowerShell in Action, 3rd Edition](https://livebook.manning.com/book/windows-powershell-in-action-third-edition)
 * [Doug Finke's ConverToClass module](https://github.com/dfinke/ConvertToClass)
 * [PSClassUtils](https://github.com/Stephanevg/PSClassUtils)
