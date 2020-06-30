@@ -203,7 +203,7 @@ The answer is that we will be a using a trick with how we create an instance of 
 
 ### Secret-Sauce : Cast-Initialization 🍲
 
-Credit goes to Buce Payette's [Windows PowerShell in Action 3rd](https://livebook.manning.com/book/windows-powershell-in-action-third-edition/chapter-19/311) edition which talks a bit about this technique in brief.
+Credit goes to Bruce Payette's [Windows PowerShell in Action 3rd](https://livebook.manning.com/book/windows-powershell-in-action-third-edition/chapter-19/311) edition which talks a bit about this technique in brief.
 
 In short, you can take a hashtable or PSObjects and cast them as strongly type object instance. This will become more clear when we perform this casting a bit later.
 
