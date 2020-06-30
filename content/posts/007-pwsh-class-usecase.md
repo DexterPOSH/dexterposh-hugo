@@ -288,5 +288,5 @@ I think slowly embracing more Object-Oriented programming using PowerShell class
 * [PowerShell to C# and back](https://leanpub.com/powershell-to-csharp) - Disclaimer: co-author on this one.
 * [PowerShell to C# and Back – Introduction to Classes](https://ridicurious.com/2020/06/29/powershell-to-csharp-and-back-classes/)
 * [Windows PowerShell in Action, 3rd Edition](https://livebook.manning.com/book/windows-powershell-in-action-third-edition)
-* [Doug Finke's ConverToClass module](https://github.com/dfinke/ConvertToClass)
+* [Doug Finke's ConvertToClass module](https://github.com/dfinke/ConvertToClass)
 * [PSClassUtils](https://github.com/Stephanevg/PSClassUtils)
