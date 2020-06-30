@@ -21,7 +21,7 @@ Well, I suggested to write Pester tests to check the input being passed and perf
 
 Another idea that popped up in my mind was what if we write a PowerShell class to model the ARM parameters file and use that to validate the ARM template parameter inputs.
 
-## Solution ✅
+## Solution 🚀
 
 There exists the [ConvertToClass](https://github.com/dfinke/ConvertToClass) module by Doug Finke, whic comes to the rescue to automatically convert a JSON object to a PowerShell class. It even has VSCode integration, check it out.
 
@@ -230,17 +230,56 @@ Modify some value in the `azuredeploy.parameters.json` file to not-follow some v
 }
 ```
 
+Now, see the result when casting this as our `ArmParameters` class.
+
 ```powershell
 [azureparameters] (Get-Content -Path $PSScriptRoot/azuredeploy.parameters.json | ConvertFrom-Json)
 ```
 
 ![Validation in Action](/static/007/validation.png)
 
-Now, see the result when casting this as our `ArmParameters` class.
+Throws below error:
 
 ```error
 InvalidArgument: Cannot convert value "@{$schema=https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#; contentVersion=1.0.0.0; parameters=}" to type "AzureParameters". Error: "Cannot convert value "@{storageAccountNamePrefix=; numberofStorageAccounts=; storageAccountType=; location=}" to type "Parameters". Error: "Cannot create object of type "NumberofStorageAccounts". The 20 argument is greater than the maximum allowed range of 10. Supply an argument that is less than or equal to 10 and then try the command again.""
 ```
+
+Fix the value for the `numberofStorageAccounts` parameter.
+
+```json
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "storageAccountNamePrefix": {
+      "value": "azurearm6754"
+    },
+    "numberofStorageAccounts": {
+      "value": 2
+    },
+    "storageAccountType": {
+      "value": "Standard_LRS"
+    },
+    "location": {
+      "value": "westus2"
+    }
+  }
+}
+```
+
+Run the below again:
+
+```powershell
+[azureparameters] (Get-Content -Path $PSScriptRoot/azuredeploy.parameters.json | ConvertFrom-Json)
+```
+
+![Validation passes](/static/007/valid.png)
+
+## Conclusion ✅
+
+This is maybe a very naive way of solving this but I read about a topic and used it to solve a problem in a unique way, which is a win for me 😎.
+
+I think slowly embracing more Object-Oriented programming using PowerShell classes (or C#) can open up some interesting ways to solve problems in my tooling.
 
 ## Resource links 📚
 
