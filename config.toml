@@ -10,6 +10,9 @@ googleAnalytics = "UA-165270256-1"
 enableEmoji = true
 summarylength = 30
 
+[permalinks]
+  fixed = ":title"
+
 [params]
   author = "Deepak Singh Dhami"
   title = "DexterPOSH"
@@ -21,6 +24,7 @@ summarylength = 30
 
   # Table of contents
   toc = "hugo"
+  NewsletterSignup = "https://tinyletter.com/DexterPOSH"
 
 [params.social]
     github = "dexterposh"
@@ -31,6 +35,17 @@ summarylength = 30
     weight = 100
     identifier = "posts"
     url = "/posts/"
+
+[[menu.main]]
+    name = "Subscribe"
+    weight = 99
+    identifier = "Subscribe"
+    url = "/Subscribe/"
+[[menu.main]]
+    name = "About"
+    weight = 1
+    identifier = "About"
+    url = "/About/"
 
 [outputFormats]
 [outputFormats.RSS]
