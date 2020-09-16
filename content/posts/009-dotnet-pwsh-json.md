@@ -10,7 +10,7 @@ highlightjslanguages: ["csharp", "powershell"]
 
 Coming from PowerShell background, while learning ASP.NET Core based development. I wanted to wrap my head around how to handle JSON, so ended up taking notes on how to do this in C# and convert those into PowerShell for my reference as well.
 
-In my explorations I like using the dotnet-script global tool for interactive user experince with C# and PowerShell core (which is already an interactive shell). Giving the credit where it's due, I followed this [tutorial](http://zetcode.com/csharp/json/)) to learn JSON handling in C# and made these notes of my own.
+In my explorations I like using the dotnet-script global tool for interactive user experince with C# and PowerShell core (which is already an interactive shell). Giving the credit where it's due, I followed this [tutorial](http://zetcode.com/csharp/json/) to learn JSON handling in C# and made these notes of my own.
 
 In this post the topics covered are:
 
