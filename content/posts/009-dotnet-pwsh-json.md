@@ -4,13 +4,18 @@ date: 2020-09-16T11:12:33+05:30
 categories: [".NET"]
 tags: [".net", "csharp", "json", "powershell"]
 highlightjslanguages: ["csharp", "powershell"]
+image: "/static/009/cover.png"
 ---
 
 ## Background
 
-Coming from PowerShell background, while learning ASP.NET Core based development. I wanted to wrap my head around how to handle JSON, so ended up taking notes on how to do this in C# and convert those into PowerShell for my reference as well.
+Coming from PowerShell background, while learning ASP.NET Core based development
+I wanted to wrap my head around how to handle JSON, so ended up taking notes on how to do this in C# and as
+an exercise convert those into PowerShell code snippets for my reference.
 
-In my explorations I like using the dotnet-script global tool for interactive user experince with C# and PowerShell core (which is already an interactive shell). Giving the credit where it's due, I followed this [tutorial](http://zetcode.com/csharp/json/) to learn JSON handling in C# and made these notes of my own.
+In my explorations I like using the dotnet-script global tool for interactive user experience with C# and PowerShell core (which is already an interactive shell). So, you will see that I mostly use C# script files (.csx) and PowerShell script files (.ps1).
+
+> Giving the credit where it's due, I followed this [tutorial](http://zetcode.com/csharp/json/) to learn JSON handling in C# and made these notes of my own.
 
 In this post the topics covered are:
 
@@ -23,7 +28,7 @@ In this post the topics covered are:
 
 ## JSON parsing
 
-JSON parsing is basically reading the JSON data and converting it into a typed object `JsonDocument` in C#.
+JSON parsing is basically reading the JSON data and converting it into a `JsonDocument` typed object in C#.
 
 Long story short:
 
@@ -74,6 +79,7 @@ Write-Host $User1.GetProperty("name")
 Write-Host $User2.GetProperty("name")
 
 # dispose the JsonDocument once done
+# We don't do this in C# coz of the using statement automatically doing this
 $doc.Dispose()
 ```
 
