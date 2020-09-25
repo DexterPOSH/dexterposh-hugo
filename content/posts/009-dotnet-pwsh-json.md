@@ -1,5 +1,5 @@
 ---
-title: "PowerShell to C# & back - JSON wrangling notes - Part I"
+title: "PowerShell to C# & back - JSON parse & enumerate"
 date: 2020-09-16T11:12:33+05:30
 categories: [".NET"]
 tags: [".net", "csharp", "json", "powershell"]
@@ -67,8 +67,8 @@ To do the same in PowerShell, below are the contents of a test.ps1 file.
 #!/usr/bin/env pwsh
 using namespace System.Text.Json
 
-$data = "[ {`"name`": `"John Doe`", `"occupation`": `"gardener`"}, " +
-                "{`"name`": `"Peter Novak`", `"occupation`": `"driver`"} ]";
+$data = '[{"name": "John Doe", "occupation": "gardener"},' +
+                '{"name": "Peter Novak", "occupation": "driver"} ]';
 
 $doc = [JsonDocument]::Parse($data)
 $root = $doc.RootElement
