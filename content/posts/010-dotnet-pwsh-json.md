@@ -2,7 +2,7 @@
 title: "PowerShell to C# & back - JSON Seriazlie & Deserialize"
 date: 2020-09-25T07:12:33+05:30
 categories: [".NET"]
-tags: [".net", "csharp", "json", "powershell", "pwshtoC#andback"]
+tags: [".net", "csharp", "json", "powershell", "PwshtoCSharpAndBack"]
 highlightjslanguages: ["csharp", "powershell"]
 image: "/static/009/cover.png"
 ---

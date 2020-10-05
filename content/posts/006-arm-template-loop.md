@@ -4,7 +4,7 @@ date: 2020-05-26T15:18:35+05:30
 highlight: false
 image: "/static/006/transformParams.png"
 categories: ["Azure"]
-tags: ["azure", "arm", "iac", "cloud", "pwshtoC#"]
+tags: ["azure", "arm", "iac", "cloud"]
 ---
  
 ## Background 🧐

@@ -2,7 +2,7 @@
 title: "PowerShell Classes - Validating ARM parameters"
 date: 2020-06-29T19:42:59+05:30
 image: "/static/007/class1.png"
-tags: ["azure","powershell", "tip"]
+tags: ["azure","powershell", "tip", "PwshtoCSharpAndBack"]
 categories: ["powershell"]
 include_toc: true
 highlightjslanguages: ["powershell"]

@@ -2,7 +2,7 @@
 title: "PowerShell to C# & back - JSON Create, Beautify"
 date: 2020-10-05T09:07:45+05:30
 categories: [".NET"]
-tags: [".net", "csharp", "json", "powershell", "pwshtoC#andback"]
+tags: [".net", "csharp", "json", "powershell", "PwshtoCSharpAndBack"]
 highlightjslanguages: ["csharp", "powershell"]
 image: "/static/009/cover.png"
 ---

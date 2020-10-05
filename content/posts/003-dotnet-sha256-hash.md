@@ -2,7 +2,7 @@
 title: ".NET notes - create SHA256 hash"
 date: 2020-06-05T10:18:40+05:30
 categories: [".NET"]
-tags: [".net", "csharp", "sha256", "cryptography", "pwshtoC#andback"]
+tags: [".net", "csharp", "sha256", "cryptography", "PwshtoCSharpAndBack"]
 highlightjslanguages: ["csharp", "bash"]
 ---
 
