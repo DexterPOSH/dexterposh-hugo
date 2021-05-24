@@ -71,9 +71,9 @@ Note - This regex matching can be applied to any resource or any property define
 Search-AzGraph -Query "where type =~ 'Microsoft.Compute/VirtualMachines' and name matches regex 'test-[0-9].*'"
 ```
 
-### Find Virtual machines for a specific Department/Group
+### Find Virtual machines for a specific tag
 
-Gist is Kusto allows for filtering at all the level, so we can filter based on the groupEmail tag or the Department Name tag and can chain multiple where command expressions.
+Gist is Kusto allows for filtering at all the level, so we can filter based on a specific tag or can chain multiple tags to filter.
 
 ```pwsh
 # Filter based on a tag called the department
@@ -98,7 +98,7 @@ Note - Remove the end 'limit' command expression at the end of query if you need
 Search-AzGraph -Query "where type =~ 'Microsoft.Compute/VirtualMachines' and isnotempty(properties.storageProfile.imageReference.publisher)|  limit 1"
 ```
 
-### Find Virtual machines deployed using custom OS Images
+### Find Virtual machines deployed using custom Images
 
 This query utilizes the fact that the publisher field does not exist for a VM deployed using a generalized image.
 
@@ -136,7 +136,7 @@ $nic.properties.virtualMachine.id # this is the resource ID of the VM
 Search-AzGraph -Query "where type =~ 'Microsoft.Compute/VirtualMachines' and id == `'$($nic.properties.virtualMachine.id)`'"
 ```
 
-### Find Virtual Machine information
+### Gather extra Virtual Machine information
 
 To gather the relevant information for different VM resources e.g. network, storage, subscription etc, one can use PowerShell to extend the object returned from the resource graph query.
 
