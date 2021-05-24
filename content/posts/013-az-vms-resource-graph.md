@@ -32,7 +32,7 @@ In this post, I share some of the Resource Graph Queries I have found useful whi
 
 Prerequisite is the Az CLI (with graph extension) or Az.ResourceGraph PowerShell module which supports this.
 
-```pwsh
+```powershell
 # Install the Resource Graph module from PowerShell Gallery
 Install-Module -Name Az.ResourceGraph
 ```
@@ -52,7 +52,7 @@ Below are list of queries for Virtual machines.
 
 If you want to find out if a virtual machine is present across all the subscriptions you have access to, you can use the below Resource graph query with Az CLI.
 
-```pwsh
+```powershell
 # Using Az.ResourceGraph Module
 Search-AzGraph -Query "where type =~ 'Microsoft.Compute/VirtualMachines' and name == 'testvm01'"
 ```
@@ -68,7 +68,7 @@ az graph query -q "where type =~ 'Microsoft.Compute/VirtualMachines' and Name ==
 
 Note - This regex matching can be applied to any resource or any property defined in the Resource schema as well.
 
-```pwsh
+```powershell
 Search-AzGraph -Query "where type =~ 'Microsoft.Compute/VirtualMachines' and name matches regex 'test-[0-9].*'"
 ```
 
@@ -76,7 +76,7 @@ Search-AzGraph -Query "where type =~ 'Microsoft.Compute/VirtualMachines' and nam
 
 Gist is Kusto allows for filtering at all the levels, so we can filter based on a specific tag or can chain multiple tags to filter.
 
-```pwsh
+```powershell
 # Filter based on a tag called the department
 # Note that tags are case-sensitive
 Search-AzGraph -Query "where type =~ 'Microsoft.Compute/VirtualMachines' and tags.department =~ 'ITDepartment'"
@@ -95,7 +95,7 @@ This query utilizes the fact that the publisher field for a market place will no
 
 Note - Remove the end 'limit' command expression at the end of query if you need the exhaustive list.
 
-```pwsh
+```powershell
 Search-AzGraph -Query "where type =~ 'Microsoft.Compute/VirtualMachines' and isnotempty(properties.storageProfile.imageReference.publisher)|  limit 1"
 ```
 
@@ -105,7 +105,7 @@ This query utilizes the fact that the publisher field does not exist for a VM de
 
 **Note** - Remove the end 'limit' command expression at the end of query if you need the exhaustive list.
 
-```pwsh
+```powershell
 Search-AzGraph -Query "where type =~ 'Microsoft.Compute/VirtualMachines' and isempty(properties.storageProfile.imageReference.publisher)| limit 1"
 ```
 
@@ -115,7 +115,7 @@ In this example the query checks for VMs which do not have a specific tag named 
 
 Note - Remove the end 'limit' command expression at the end of query if you need the exhaustive list.
 
-```pwsh
+```powershell
 Search-AzGraph -Query "where type =~ 'Microsoft.Compute/VirtualMachines' and isempty(tags.group)
 | project name, location, resourceGroup, subscriptionId, Group=tags.group
 | limit 5"
@@ -127,7 +127,7 @@ This can simply be done by doing a reverse lookup of the IPaddress but in some c
 
 We start by looking for network interfaces which have this IP address
 
-```pwsh
+```powershell
 $nic = Search-AzGraph -Query "where type =~ 'Microsoft.Network/networkInterfaces' |
 where properties.ipConfigurations[0].properties.privateIPAddress == '10.10.10.6'"
  
@@ -143,7 +143,7 @@ To gather the relevant information for different VM resources e.g. network, stor
 
 Below I show usage of a crude way of using PowerShell to do this e.g. using a filter.
 
-```pwsh
+```powershell
 Filter GetVMInfo {
     $networkQuery = "where type =~ 'Microsoft.Network/networkInterfaces' and id == `'$($PSItem.properties.networkProfile.networkInterfaces[0].id)`'"
     $network = Search-AzGraph -Query $networkQuery
@@ -172,7 +172,7 @@ Filter GetVMInfo {
 
 Use the above filter like below:
 
-```pwsh
+```powershell
 # Search for the VM first using the Az Resurce Graph
 $VM = Search-AzGraph -Query "where type =~ 'Microsoft.Compute/VirtualMachines' and name == 'testvm01'"
 
