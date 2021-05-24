@@ -71,9 +71,9 @@ Note - This regex matching can be applied to any resource or any property define
 Search-AzGraph -Query "where type =~ 'Microsoft.Compute/VirtualMachines' and name matches regex 'test-[0-9].*'"
 ```
 
-### Find Virtual machines for a specific tag
+### Find Virtual machines with a specific tag
 
-Gist is Kusto allows for filtering at all the level, so we can filter based on a specific tag or can chain multiple tags to filter.
+Gist is Kusto allows for filtering at all the levels, so we can filter based on a specific tag or can chain multiple tags to filter.
 
 ```pwsh
 # Filter based on a tag called the department
