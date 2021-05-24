@@ -1,6 +1,6 @@
 ---
 title: "Azure Resource Graph Queries collection"
-date: 2021-03-05T20:10:33+05:30
+date: 2021-05-24T20:10:33+05:30
 categories: ["DevOps"]
 tags: ["Azure", "DevOps", "ResourceGraph", "powershell", "VMs"]
 highlightjslanguages: [ "powershell", "bash"]
