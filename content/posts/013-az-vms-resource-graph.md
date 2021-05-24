@@ -55,6 +55,7 @@ If you want to find out if a virtual machine is present across all the subscript
 ```pwsh
 # Using Az.ResourceGraph Module
 Search-AzGraph -Query "where type =~ 'Microsoft.Compute/VirtualMachines' and name == 'testvm01'"
+```
 
 Now for most of the queries in this post, you can do one to one translation to Az CLI commands by extracting the query and using it, I prefer to use PowerShell and that will be used in the rest of the examples.
 
