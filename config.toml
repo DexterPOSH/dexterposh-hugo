@@ -1,7 +1,7 @@
 baseURL = "https://dexterposh.github.io/"
 languageCode = "en-us"
 
-title = "System Engineer taking Dev?Ops notes"
+title = "Engineer taking Dev?Ops notes"
 theme = "hyde-hyde"
 
 paginate = 5
@@ -16,7 +16,7 @@ summarylength = 30
 [params]
   author = "Deepak Singh Dhami"
   title = "DexterPOSH"
-  description = "Cloud, Servers & Code."
+  description = "Cloud, Containers & Code."
   authorimage = "avatar.jpg"
   dateformat = "Jan 2, 2006"
   highlightjs = true
